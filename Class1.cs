@@ -60,8 +60,8 @@
             {
                 right[j - mid] = elements[j];
             }
-            left = MergeS(left);
-            right = MergeS(right);
+            left = Sort(left);
+            right = Sort(right);
             return MergeMethod(left, right);
         }
     }
