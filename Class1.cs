@@ -24,7 +24,7 @@
                     resindex++;
                     continue;
                 }
-                if (a[aindex].CompareTo(b[bindex])==-1 || a[aindex].CompareTo(b[bindex]) == 0)
+                if (a[aindex].CompareTo(b[bindex]) == -1 || a[aindex].CompareTo(b[bindex]) == 0)
                 {
                     result[resindex] = a[aindex];
                     aindex++;
@@ -32,7 +32,7 @@
                     continue;
                 }
 
-                if (bindex < b.Length && a[aindex].CompareTo(b[bindex])==1)
+                if (bindex < b.Length && a[aindex].CompareTo(b[bindex]) == 1)
                 {
                     result[resindex] = b[bindex];
                     bindex++;
@@ -42,7 +42,7 @@
             }
             return result;
         }
-        public static T[] MergeS(T[] elements)
+        public static T[] Sort(T[] elements)
         {
             if (elements.Length == 1)
             {
@@ -58,7 +58,7 @@
             }
             for (int j = mid; j < elements.Length; j++)
             {
-                right[j-mid] = elements[j];
+                right[j - mid] = elements[j];
             }
             left = MergeS(left);
             right = MergeS(right);
